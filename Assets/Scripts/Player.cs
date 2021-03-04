@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
 
         if (Physics.CheckSphere(roofCheck.position, roofDistance, groundMask))
         {
-            velocity.y = -9.81f;
+            velocity.y = -0.5f;
         }
 
         float x = Input.GetAxis("Horizontal");
