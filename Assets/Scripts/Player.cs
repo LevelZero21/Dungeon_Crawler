@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
 
     private bool m_Walking = false;
     private bool m_Running = false;
+    [SerializeField] private Animator m_Animator;
 
     void Start()
     {
@@ -46,11 +47,13 @@ public class Player : MonoBehaviour
         {
             m_Running = true;
             m_Speed = m_SprintSpeed;
+            m_Animator.SetBool("IsRunning", true);
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             m_Running = false;
             m_Speed = m_WalkingSpeed;
+            m_Animator.SetBool("IsRunning", false);
         }
 
         CheckIfWalking();
@@ -91,10 +94,12 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S))
         {
             m_Walking = true;
+            m_Animator.SetBool("IsWalking", true);
         }
         if (Input.GetKey(KeyCode.A) == false && Input.GetKey(KeyCode.D) == false && Input.GetKey(KeyCode.W) == false && Input.GetKey(KeyCode.S) == false)
         {
             m_Walking = false;
+            m_Animator.SetBool("IsWalking", false);
         }
     }
 
