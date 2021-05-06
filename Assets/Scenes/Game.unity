@@ -3689,7 +3689,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 90
+  field of view: 100
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -7422,9 +7422,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AttachPoint: {fileID: 1532867961}
   m_Controller: {fileID: 1725098027}
-  m_WalkingSpeed: 3
-  m_SprintSpeed: 5
-  m_CrouchSpeed: 2
+  m_WalkingSpeed: 5
+  m_SprintSpeed: 8
+  m_CrouchSpeed: 4
   gravity: -40
   jumpHeight: 1.5
   groundCheck: {fileID: 36149848}
@@ -7433,6 +7433,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   m_CrouchHeight: 1.5
+  m_Animator: {fileID: 5866666020587752168}
 --- !u!143 &1725098027
 CharacterController:
   m_ObjectHideFlags: 0
@@ -11414,7 +11415,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 3be99206560ab2e4d8f30c10819a0e7a, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
